@@ -1,15 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../../Banner/Banner';
-import Footer from '../../Footer/Footer';
-import Services from '../Services/Services';
+import Service from '../Service/Service';
 
 const Home = () => {
+    const [homes, setHomes] = useState([])
+    useEffect(() => {
+        fetch('/fake.json')
+        .then(res => res.json())
+        .then(data => setHomes(data))
+    },[])
     return (
         <div>
-            <h1>This is home</h1>
             <Banner></Banner>
-            <Services></Services>
-            <Footer></Footer>
+            <br />
+            <div id="services" className="service-container">
+                {
+                    homes.map(service => <Service
+                        service = {service}
+                    ></Service>)
+                }
+            </div>
         </div>
     );
 };
