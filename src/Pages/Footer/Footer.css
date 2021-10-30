@@ -1,0 +1,14 @@
+.hover {
+  font-size: 30px;
+  transition: 1s;
+}
+.hover:hover {
+  color: #ffe500;
+  cursor: pointer;
+}
+h3 .spa {
+  color: #ffe500;
+}
+.title {
+  color: #ffe500;
+}
