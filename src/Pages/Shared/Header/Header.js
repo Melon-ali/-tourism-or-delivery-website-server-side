@@ -10,13 +10,13 @@ const Header = () => {
         <>
             <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
                 <Container>
-                    <Navbar.Brand to="/home">Getaway Tourism</Navbar.Brand>
+                    <Navbar.Brand to="/home"><img src="https://getaway.qodeinteractive.com/wp-content/uploads/2017/08/light-logo-img.png" alt="" /></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Link className="link" to="/home">Home</Link>
                         <Link className="link" to="/services">Services</Link>
-                        <Link className="link" to="/doctors">Doctors</Link>
-                        <Link className="link" to="/about">About</Link>
+                        <Link className="link" to="/addService">Add Service</Link>
+                        <Link className="link" to="/manageServices">Manage Services</Link>
                         {user?.email ?
                             <Button onClick={logOut} variant="light">Logout</Button>:
                             <Link className="link" to="/login">Login</Link>}

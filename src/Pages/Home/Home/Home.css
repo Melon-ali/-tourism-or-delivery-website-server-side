@@ -1,0 +1,30 @@
+.font {
+  color: #000000;
+  font-weight: bolder;
+}
+.font-2 {
+  color: gray;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+@media only screen and (max-width: 688px) {
+  .home-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 991px) {
+  .home-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.fs {
+  text-align: center;
+  font-size: 200px;
+  font-weight: bolder;
+  color: #ffe500;
+}

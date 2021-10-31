@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = (props) => {
-    const {id, name, description, img, price} = props.service;
+    const {_id, name, description, img, price} = props.service;
     return (
         <div>
             <div className="">
@@ -14,7 +14,7 @@ const Service = (props) => {
                         <p class="card-text px-2">{description}</p>
                         <div className="d-flex bd-highlight">
                             <div className=" flex-grow-1 bd-highlight">
-                                <Link to={`/details/${id}`}>
+                                <Link to={`/details/${_id}`}>
                                     <button className="btn">Read More</button>
                                 </Link>
                             </div>
